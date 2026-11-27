@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+ 
+@Component({
+  selector: 'app-inicio',
+  template: `
+    <h1>Bienvenido 👋</h1>
+    <p>Esta es la página de inicio. Usa el menú para navegar.</p>
+  `,
+})
+export class Inicio {}
