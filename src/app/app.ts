@@ -1,25 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Menu } from './components/menu/menu';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
-  template:  `
-    <header>
-      <nav>
-        <a routerLink="/" routerLinkActive="activo"
-           [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
-        <a routerLink="/menu" routerLinkActive="activo">Menu</a>
-        <a routerLink="/llistaProductes" routerLinkActive="activo">llistaProductes</a>
-      </nav>
-    </header>
- 
+  imports: [RouterOutlet, Menu],
+  template: `
+    <h1>Botiga tecnològica</h1>
+    <app-menu />
     <main>
       <router-outlet />
     </main>
   `,
-  styleUrl: './app.css'
 })
-export class App {
- 
-}
+export class App {}

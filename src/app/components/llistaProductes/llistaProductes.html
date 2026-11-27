@@ -1,1 +1,22 @@
-<p>llista-productes works!</p>
+<h1>LISTA DE PRODUCTOS</h1>
+<table>
+   <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Preu</th>
+      <th>Disponibilitat</th>
+    </tr>
+  </thead> 
+@for(producte of productes; track producte){
+
+<tr> 
+    <td>{{ $index + 1 }}</td>
+    <td>{{producte.nom}}</td>
+    <td>{{producte.preu}}e</td>
+    @if (producte.disponible) {
+        <td>En estoc</td>
+    } @else {<td>No disponible</td>}
+    
+</tr>
+}
+</table>
